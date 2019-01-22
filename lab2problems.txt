@@ -32,15 +32,15 @@ along with the carry bit, separated by a semicolon.  For example:
 
 3.) What is 1 + 1 with a carry bit?
 3.answer)
-
+1;1
 
 4.) What is 1 + 0 with a carry bit?
 4.answer)
-
+0;1
 
 5.) What is 0 + 0 with a carry bit?
 5.answer)
-
+1;0
 
 
 ---Binary Addition Over Multiple Bits---
@@ -61,25 +61,25 @@ information after the 8-bit answer, separated by a space.  For example:
     10010001
    +01100110?
 7.answer)
-
+11110111
 
 8.) What is
     11011011
    +01100011?
 8.answer)
-
+00111110 C
 
 9.) What is
     00111101
    +10110001?
 9.answer)
-
+11101110
 
 10.) What is
      10111101
     +10000001?
 10.answer)
-
+00111110 VC
 
 
 ---Negating (i.e. making negative) Binary Numbers in Twos Complement---
@@ -98,17 +98,17 @@ step.
 11.) What is the negated version of:
      01101101?
 11.answer)
-
+10110111
 
 12.) What is the negated version of:
      11001001?
 12.answer)
-
+10010111
 
 13.) What is the negated version of:
      11100100?
 13.answer)
-
+00101111
 
 
 ---Subtracting Binary Numbers in Twos Complement---
@@ -125,25 +125,25 @@ the same format used in the "Binary Addition Over Multiple Bits" section.
      11001101
     -01100100?
 14.answer)
-
+01101001 VC
 
 15.) What is
      01101001
     -10110101?
 15.answer)
-
+10110100 V
 
 16.) What is
      10010110
     -11101010?
 16.answer)
-
+10101100
 
 17.) What is
      10110010
     -00000001?
 17.answer)
-
+10110001 C
 
 
 ---Basic Bitwise Operations---
@@ -155,73 +155,73 @@ XOR with `^`.
      01101101
     &10101011?
 18.answer)
-
+00101001
 
 19.) What is
      11001001
     &11110001?
 19.answer)
-
+11000001
 
 20.) What is
      10011011
     &10011011?
 20.answer)
-
+10011011
 
 21.) What is
      01101110
     &10010001?
 21.answer)
-
+00000000
 
 22.) What is
      10011011
     |11100101?
 22.answer)
-
+11111111
 
 23.) What is
      01101101
     |01101101?
 23.answer)
-
+01101101
 
 24.) What is
      11010001
     |11110001?
 24.answer)
-
+11110001
 
 25.) What is
      10111101
     |00000001?
 25.answer)
-
+10111101
 
 26.) What is
      01101101
     ^10010010?
 26.answer)
-
+11111111
 
 27.) What is
      01101010
     ^11101011?
 27.answer)
-
+10000001
 
 28.) What is
      11001010
     ^11100101?
 28.answer)
-
+00101111
 
 29.) What is
      11110101
     ^00001011?
 29.answer)
-
+11111110
 
 ---Bit Shifting---
 
@@ -234,60 +234,60 @@ For this section, all your answers should consist of exactly 8 result bits.
 30.) What is
      11010010 << 1?
 30.answer)
-
+10100100
 
 31.) What is
      11101010 << 2?
 31.answer)
-
+0101000
 
 32.) What is
      01010011 >> 1,
      for _logical_ shift right?
 32.answer)
-
+00101001
 
 33.) What is
      01010011 >> 1,
      for _arithmetic_ shift right?
 33.answer)
-
+10101001
 
 34.) What is
      01110011 >> 2,
      for _logical_ shift right?
 34.answer)
-
+00011100
 
 35.) What is
      01110011 >> 2,
      for _arithmetic_ shift right?
 35.answer)
-
+11011100
 
 36.) What is
      11010011 >> 1,
      for _logical_ shift right?
 36.answer)
-
+01101001
 
 37.) What is
      11010011 >> 1,
      for _arithmetic_ shift right?
 37.answer)
-
+11101001
 
 38.) What is
      11110011 >> 2,
      for _logical_ shift right?
 38.answer)
-
+00111100
 
 39.) What is
      11110011 >> 2,
      for _arithmetic_ shift right?
 39.answer)
-
+11111100
 
 ---Advanced Bitwise Operations---
 
@@ -307,13 +307,13 @@ is the same bit value as the corresponding bit in the unknown number.
      XXXXXXXX
     |11001010?
 40.answer)
-
+11XX1X1X
 
 41.) What is
      XXXXXXXX
     &10110110?
 41.answer)
-
+X0XX0XX0
 
 For the following three questions, remember that bit numbers start
 numbering from 0, and that hexadecimal numbers are always unsigned.
@@ -324,17 +324,19 @@ the hexadecimal mask 0x0020.)
 42.) Specify the mask you would need to inspect bit 5 of the unknown number.
      Express it as a 4-digit hexadecimal number.
 42.answer)
+&0x0020
 
 
 43.) Specify the mask you would need to set bit 5 of the unknown number to zero.
      That is, the result of this operation results in a new number, which the unknown
      number should be subsequently set to.  Express it as a 4-digit hexadecimal number.
 43.answer)
-
+|&0xFFDF
 
 44.) Specify the mask you would need to set bit 5 of the unknown number to one.
      That is, the result of this operation results in a new number, which the unknown
      number should be subsequently set to.  Express it as a 4-digit hexadecimal number.
 44.answer)
+|0x0020
 
 
